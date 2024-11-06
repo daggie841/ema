@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Emcake Cake </title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #fff0f5;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+      /* Header Styles */
+header {
+    background-color: deeppink;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+header .logo img {
+    width: 100%;  /* Make the logo width responsive */
+    max-width: 150px; /* Set a maximum size */
+    height: auto; /* Ensure aspect ratio is maintained */
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        max-width: 120px; /* Reduce the size for smaller screens */
+    }
+}
+
+
+        header .logo {
+            position: absolute;
+            left: -10px;
+        }
+
+        header .header-content {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+      
+        header .p {
+            font-size: 1.2em;
+        }
+
+
+
+        /* Navigation Styles */
+        nav {
+            background-color: hotpink;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #fff0f5;
+        }
+        /* Profile Section */
+#profile {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('j.png') no-repeat center right;
+    background-size: cover;
+    color: #333;
+    font-style: italic;
+    font-size: 1.2em;
+/*    border-radius: 10px;*/
+    position: relative;
+    overflow: hidden;
+}
+
+/* Text Styling */
+#profile h2 {
+    color: #ff69b4;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#profile p {
+    color: black;
+    max-width: 50%;
+}
+
+/* Fade-in Animation for Background */
+#profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('1d.jpg') no-repeat center center;
+    background-size: cover;
+/*    transform: translateX(100%);*/
+/*    transition: transform 1.5s ease;*/
+    z-index: -1;
+}
+
+#profile:hover::before {
+    transform: translateX(0);
+}
+
+        /* Gallery Section Styles */
+#gallery {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffe4e1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#gallery h2 {
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+#gallery p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3D Hover Effect */
+.gallery img:hover {
+    transform: scale(1.1) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+/* General Styles for the Experience Section */
+#experience {
+    background-color: #ffe6e6; /* Light pink background to match Emcake Bakery's color scheme */
+    padding: 40px;
+    text-align: center;
+}
+
+#experience h2 {
+    color: #d32b8b; /* Deep pink color for the heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#experience p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* Grid Styling */
+.experience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.experience-item {
+    background-color: #fff;
+    border: 2px solid #d32b8b; /* Deep pink border */
+    border-radius: 8px;
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px); /* Adds a hover effect for interaction */
+}
+
+/* Image Styling */
+.experience-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Heading and Text Styling for Each Experience Item */
+.experience-item h3 {
+    color: #d32b8b;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+        /* Section Styles */
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section h2 {
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        /* Grid for services */
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-item {
+            flex: 1 1 200px;
+            padding: 20px;
+            background-color: #ffe4e1;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .service-item img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        /* Personnel Profile Styles */
+        .personnel-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .person-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .person-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        /* General Contact Section Styles */
+#contact {
+    background-color: #fff5f5; /* Light pink background */
+    padding: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    color: #d32b8b; /* Deep pink color */
+    margin-bottom: 30px;
+}
+
+/* Social Links Container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Social Link Icon Styling */
+.social-link i {
+    font-size: 40px; /* Size of the icons */
+    color: #d32b8b; /* Icon color (deep pink) */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link i:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+    color: #c2185b; /* Darker shade of pink when hovered */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-link i {
+        font-size: 35px; /* Smaller icons for mobile */
+    }
+}
+
+
+        /* Footer Styles */
+        footer {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex; /* Align items side by side */
+            justify-content: space-between; /* Space out the items */
+        }
+        .item {
+            width: 45%; /* Each item will take up 45% of the container's width */
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+     <div class="logo">
+        <img src="kk.png" alt="Emcake Bakery Logo" width="150">
+    </div>
+    <p><b>Emcake Cake bakery</b><br>CALL 0723371480<br>Location:Mokowe</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#profile">Profile</a>
+    <a href="#services">Services Offered</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<!-- Company Profile Section -->
+<section id="profile">
+    <div class="profile-content">
+        <div class="text">
+            <h2>Emcake Cake Bakery </h2>
+            <p>Welcome to Emcake Cake Bakery – where every slice is crafted with love to bring a smile! From exquisite wedding cakes to joyful birthday treats, our expertise shines through each creation.<br> Let Emcake be the heart of your celebration – bring your idea, and we’ll turn it into a colorful cake that transforms your sweetest moments into unforgettable memories..</p>
+        </div>
+        <!-- <img src="1d.jpg" alt="Emcake Bakery" class="profile-image"> -->
+    </div>
+</section>
+
+
+<!-- Services Offered Section -->
+<section id="services">
+    <h2>Services Offered</h2>
+    <div class="service-grid">
+        <div class="service-item">
+            <img src=".png" alt="Custom Cakes">
+            <h3>Custom Cakes</h3>
+            <p>Personalized cakes designed to match your unique theme and style.</p>
+        </div>
+        <div class="service-item">
+            <img src="9.jpeg" alt="Wedding Cakes">
+            <h3>Wedding Cakes</h3>
+            <p>Beautiful and delicious cakes for your special day.</p>
+        </div>
+        <div class="service-item">
+            <img src="em.png" alt="birthdays cakes">
+            <h3> Enjoy your birthday in a colorfull way.Emcake provide a solution for your birthday cakes. welcome to home of solutions</p>
+        </div>
+        <div class="service-item">
+            <img src="1.png" alt="Desserts">
+            <h3>Desserts</h3>
+            <p>A wide range of pastries and desserts to satisfy every sweet tooth.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    <p>Here are some of our latest creations:</p>
+    <div class="gallery">
+        <img src="e.png" alt="Cake 1" width="200">
+        <img src="1s.jpg" alt="Cake 2" width="200">
+        <img src="5.jpeg" alt="Cake 2" width="200">
+        <img src="7.jpeg" alt="Cake 3" width="200">
+        <img src="6.jpeg" alt="Cake 4" width="200">
+         <img src="e.png" alt="Cake 1" width="200">
+        <img src="1dd.jpg" alt="Cake 3" width="200">
+        <img src="1g.jpg" alt="Cake 4" width="200">
+         <img src="1a.jpg" alt="Occasion Cake">
+    </div>
+</section>
+
+<!-- Personnel Profile Section -->
+<section id="experience">
+    <h2>Our Experience</h2>
+    <p>With over 7 years in the cake business, Emcake Bakery has become a trusted name for special occasions, crafting cakes for everything from weddings to birthdays, homecomings, and beyond.</p>
+    
+    <div class="experience-grid">
+        <div class="experience-item">
+            <img src="gaduate.jpg" alt="Graduation Cake">
+            <div>
+                <h3>Graduation Cakes</h3>
+                <p>Celebrate achievements with beautifully themed cakes that add joy to graduation ceremonies.</p>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <img src="vale.png" alt="Valentine's Day Cake">
+            <div>
+                <h3>Valentine's Day Cakes</h3>
+                <p>Sweeten Valentine's Day with custom cakes that say "I love you" in the most delicious way.</p>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <img src="birth.jpg" alt="Birthday Cake">
+            <div>
+                <h3>Birthday Cakes</h3>
+                <p>Make birthdays unforgettable with cakes tailored to each unique celebration.</p>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <img src="wedd.jpg" alt="Wedding Cake">
+            <div>
+                <h3>Wedding Cakes</h3>
+                <p>Elegant and enchanting, our wedding cakes are designed to be the highlight of every celebration.</p>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <img src="home.png" alt="Homecoming Cake">
+            <div>
+                <h3>Homecoming Cakes</h3>
+                <p>Welcome loved ones back home with cakes that express love and warmth.</p>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <img src="o.jpg" alt="Other Special Occasion Cake">
+            <div>
+                <h3>Other Special Occasions</h3>
+                <p>From baby showers to corporate events, we craft cakes for every event that calls for a celebration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="social-links">
+        <a href="mailto:info@emcakebakery.com" class="social-link" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.facebook.com/EmcakeBakery" class="social-link" target="_blank" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/EmcakeBakery" class="social-link" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        </a>
+        <a href="https://www.tiktok.com/@EmcakeBakery" class="social-link" target="_blank" title="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+            <a href="tel:+254723371480" class="social-link" title="Call +254723371480">
+    <i class="fas fa-phone"></i> 
+        </a>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Your Cake Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
