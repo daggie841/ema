@@ -18,7 +18,20 @@
             background-color: #fff0f5;
             line-height: 1.6;
         }
-
+ nav {
+            background-color: hotpink;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #fff0f5;
+        }
        
 #profile {
     display: flex;
@@ -366,11 +379,44 @@
         align-items: center;
     }
 }
+          /* Footer Styles */
+        footer {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex; /* Align items side by side */
+            justify-content: space-between; /* Space out the items */
+        }
+        .item {
+            width: 45%; /* Each item will take up 45% of the container's width */
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
 
     </style>
 </head>
 <body>
+<!-- Header Section -->
+<header>
+     <div class="logo">
+        <img src="kk.png" alt="Emcake Bakery Logo" width="150">
+    </div>
+    <p><b>Emcake Cake bakery</b><br>CALL 0723371480<br>Location:Mokowe</p>
+</header>
 
+<!-- Navigation -->
+<nav>
+    <a href="#profile">Profile</a>
+    <a href="#services">Services Offered</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact Us</a>
+</nav>
 <!-- Company Profile Section -->
 <section id="profile">
     <div class="profile-content">
@@ -538,6 +584,10 @@
         </a>
     </div>
 </section>
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Your Cake Company. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
