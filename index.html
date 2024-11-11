@@ -19,66 +19,7 @@
             line-height: 1.6;
         }
 
-        /* Header Styles */
-      /* Header Styles */
-header {
-    background-color: deeppink;
-    color: white;
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
-
-header .logo img {
-    width: 100%;  /* Make the logo width responsive */
-    max-width: 150px; /* Set a maximum size */
-    height: auto; /* Ensure aspect ratio is maintained */
-}
-
-@media (max-width: 768px) {
-    header .logo img {
-        max-width: 120px; /* Reduce the size for smaller screens */
-    }
-}
-
-
-        header .logo {
-            position: absolute;
-            left: -10px;
-        }
-
-        header .header-content {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-      
-        header .p {
-            font-size: 1.2em;
-        }
-
-
-
-        /* Navigation Styles */
-        nav {
-            background-color: hotpink;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
-        nav a:hover {
-            color: #fff0f5;
-        }
-        /* Profile Section */
+       
 #profile {
     display: flex;
     align-items: center;
@@ -330,16 +271,6 @@ header .logo img {
     }
 }
 
-
-        /* Footer Styles */
-        footer {
-            background-color: #ffb6c1;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
         .container {
             display: flex; /* Align items side by side */
             justify-content: space-between; /* Space out the items */
@@ -350,33 +281,102 @@ header .logo img {
             border: 1px solid #ccc;
             box-sizing: border-box;
         }
+        /* Training Section Styles */
+#training {
+    background-color: #fff5f5; /* Light pink background */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+#training h2 {
+    font-size: 2.5em;
+    color: #d32b8b; /* Deep pink color */
+    margin-bottom: 20px;
+}
+
+#training p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Training Grid */
+.training-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.training-item {
+    background-color: #ffe4e1;
+    padding: 20px;
+    width: 280px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.training-item:hover {
+    transform: translateY(-5px);
+}
+
+.training-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.training-item h3 {
+    color: #d32b8b;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.training-item p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.4;
+}
+ button {
+            background-color: #ff1493;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ff69b4;
+        }
+
+/* Responsive Design for Training Section */
+@media (max-width: 768px) {
+    .training-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
     </style>
 </head>
 <body>
-
-<!-- Header Section -->
-<header>
-     <div class="logo">
-        <img src="kk.png" alt="Emcake Bakery Logo" width="150">
-    </div>
-    <p><b>Emcake Cake bakery</b><br>CALL 0723371480<br>Location:Mokowe</p>
-</header>
-
-<!-- Navigation -->
-<nav>
-    <a href="#profile">Profile</a>
-    <a href="#services">Services Offered</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact Us</a>
-</nav>
 
 <!-- Company Profile Section -->
 <section id="profile">
     <div class="profile-content">
         <div class="text">
             <h2>Emcake Cake Bakery </h2>
-            <p>Welcome to Emcake Cake Bakery – where every slice is crafted with love to bring a smile! From exquisite wedding cakes to joyful birthday treats, our expertise shines through each creation.<br> Let Emcake be the heart of your celebration – bring your idea, and we’ll turn it into a colorful cake that transforms your sweetest moments into unforgettable memories..</p>
+            <p>Welcome to Emcake Cake Bakery – where every slice is crafted with love to bring a smile! From exquisite wedding cakes to joyful birthday treats, our expertise shines through each creation.<br> Let Emcake be the heart of your celebration – bring your idea, and we’ll turn it into a colorful cake that transforms your sweetest moments into unforgettable memories.</p>
         </div>
         <!-- <img src="1d.jpg" alt="Emcake Bakery" class="profile-image"> -->
     </div>
@@ -409,7 +409,7 @@ header .logo img {
         <div class="service-item">
             <img src="1.png" alt="Desserts">
             <h3>Desserts</h3>
-            <p>A wide range of pastries and desserts to satisfy every sweet tooth <a href="train.html">JOIN </a></p>
+            <p>A wide range of pastries and desserts to satisfy every sweet tooth.</p>
         </div>
     </div>
 </section>
@@ -486,6 +486,35 @@ header .logo img {
         </div>
     </div>
 </section>
+<!-- Training Section -->
+<section id="training">
+    <h2>Training Programs</h2>
+    <p>At Emcake Bakery, we offer comprehensive training for students and individuals who wish to learn the art of baking. Whether you're a beginner or looking to sharpen your skills, our training sessions are designed to bring out the best in each participant <a href="training.php">read more</p></a>
+    <div class="training-grid">
+        <div class="training-item">
+            <img src="mid.jpg" alt="Baking Basics">
+            <h3>Baking Basics Training</h3>
+            <p>Our "Baking Basics" course is tailored for beginners who want to dive into the world of baking. This course   covers essential 
+                ingredients, foundational techniques, and classic recipes, providing you with the skills and confidence to create a range of delicious baked goods. From understanding how to measure and mix ingredients correctly to mastering the art of baking various treats, this course gives you a comprehensive introduction.</p>
+                 <a href="#"><button>Join</button></a>
+        </div>
+
+
+        <div class="training-item">
+            <img src="starter.jpg" alt="Advanced Techniques">
+            <h3>Advanced Techniques</h3>
+            <p>Elevate your baking with expert techniques! Master advanced skills, refine your decoration style, and explore the art of pastry. This guide provides creative tips to enhance your desserts and impress with elegant presentations by learning how to cobine colors how add decos to make the cake look nice and beautiful. Unlock new baking possibilities and take your creations to extraordinary levels.</p>
+             <a href="#"><button>Join</button></a>
+        </div>
+
+        <div class="training-item">
+            <img src="pro.jpg" alt="Professional Baking">
+            <h3>Professional Baking</h3>
+            <p>This program is ideal for aspiring bakers, emphasizing essential commercial skills and entrepreneurial knowledge to succeed in the baking industry. It prepares individuals for a rewarding career, combining technical baking expertise with business acumen.</p>
+             <a href="#"><button>Join</button></a>
+        </div>
+    </div>
+</section>
 
 
 <section id="contact">
@@ -509,11 +538,6 @@ header .logo img {
         </a>
     </div>
 </section>
-
-<!-- Footer Section -->
-<footer>
-    <p>&copy; 2024 Your Cake Company. All rights reserved.</p>
-</footer>
 
 </body>
 </html>
